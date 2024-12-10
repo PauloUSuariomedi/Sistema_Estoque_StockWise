@@ -1,0 +1,24 @@
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - app-data:/var/lib/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: stockwise
+      POSTGRES_USER: metatron
+      POSTGRES_PASSWORD: 199718
+
+volumes:
+  app-data:
+

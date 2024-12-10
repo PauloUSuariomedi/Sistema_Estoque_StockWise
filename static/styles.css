@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#id_password1,
+#id_password2 {
+    @apply border bg-white font-medium min-w-20 rounded-md shadow-sm text-sm min-w-20 w-full max-w-2xl p-2;
+}
